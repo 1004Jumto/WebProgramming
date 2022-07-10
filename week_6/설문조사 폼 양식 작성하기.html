@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 폼 양식 작성하기</title>
+</head>
+<body>
+    <h2>설문조사</h2>
+    <form method="post" action="">
+        <fieldset>
+            <legend>기본정보</legend>
+            <label for="name">이름 : </label>
+            <input type="text" name="name_" id="name"><br>
+            <label for="age">나이 : </label>
+            <input type="text" name="age_" id="age" placeholder="숫자만 입력해주세요" pattern="[0-9]+"><br>
+            성별: 
+            <label for="male">남자</label>
+            <input type="radio" name="sex" value="male" id="male">
+            <label for="female">여자</label>
+            <input type="radio" name="sex" value="female" id="female">
+        </fieldset>
+        <fieldset>
+            <legend>관심분야(1개이상)</legend>
+            <input type="checkbox" name="content" value="digital_content">디지털 콘텐츠
+            <input type="checkbox" name="content" value="web">웹프로그래밍
+            <input type="checkbox" name="content" value="database">데이터베이스
+            <input type="checkbox" name="content" value="machine_learning">기계학습
+        </fieldset>
+        <fieldset>
+            <legend>다음 문항에 대해 5점 척도로 답하세요.</legend>
+            본 세미나의 주제는 만족스러운가? 1<input type="range" name="aboutSubject" min="1" max="5">5 <br>
+            본 세미나의 초청강사는 만족스러운가? 1<input type="range" name="aboutTeacher" min="1" max="5">5 <br>
+            본 세미나의 강의시간은 적당한가? 1<input type="range" name="aboutTime" min="1" max="5">5
+        </fieldset><br>
+        기타 의견 사항<br>
+        <textarea name="comments" id="comments" cols="50" rows="5">의견을 적으세요</textarea><br>
+
+        <button type="submit">확인</button>
+        <button type="reset">취소</button>
+    </form>
+</body>
+</html>

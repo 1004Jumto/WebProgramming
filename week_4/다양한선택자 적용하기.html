@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>다양한선택자 적용하기</title>
+        <style type="text/css">
+            h2 {color: blue;}
+            small { font-style: oblique;
+                    color: gray;}
+            #headline { text-align: center;
+                        letter-spacing: 3px;}
+            #cook { color: green;
+                    text-shadow: 1px 1px 2px olive; }
+            .body1{ font-size: 12pt;}
+            .body2{ font-size: 11pt;}
+            .red{ color: red;}
+            .thick{ font-weight: bold;}
+            a:link {color: green;}
+            a:visited{color: blue;}
+        </style>
+    </head>
+    <body>
+        <h2 id="headline">나의 취미 소개하기</h2>
+
+        <p class="body1">나의 취미는 <span id="cook">요리하기</span> 입니다. </p>
+        <p class="body1">가장 잘 하는 요리는 <strong class="red" class="thick">파스타</strong><sup>1)</sup>입니다. <br>
+        저는 파스타 중에 <span class="red"> 까르보나라, 미트볼 스파게티, 크림 만조 파스타</span>를 할 줄 압니다.</p>
+        
+        <p class="body2"> <a href="https://ko.wikipedia.org/wiki/%EC%B9%B4%EB%A5%B4%EB%B3%B4%EB%82%98%EB%9D%BC">까르보나라</a>는 베이컨, 치즈, 달걀을 이용한 대표적인 크림 소스로 <span class="thick">국수 형태</span>의 파스타와 잘 어울린다. <br>
+        석탄을 캐던 광부들이 오랫동안 보존할 수 있도록 소금에 절인 고기와 달걀만으로 만들어 먹기 시작한 것이 까르보나라의 시초이다.</p>
+
+        <p class="body2">미트볼 스파게티는 스파게티에 쇠고기로 직접 만든 미트볼, 토마토 소스를 얹은 요리로
+            면과 고기가 함께 들어있어 <span class="thick">어린이 간식</span>으로 좋다.</p>
+
+        <p class="body2">만조 크림 파스타는 <span class="thick">안심 스테이크</span>로 만든 크림소스 파스타로 만조는 이태리어로 황소란 뜻입니다.</p>
+
+        <p><small> <sup>1)</sup><span class="red">파스타</span>란, 국수로 밀가루를 달걀에 반죽하여 만들며 마카로니, 스파게티 따위가 대표적이다.</small></p>
+    </body>
+    </html>

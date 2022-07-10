@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>최대값 최소값 찾기</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = new Array();
+        var N = Number(prompt("입력할 숫자의 개수를 입력해주세요",""));
+        
+        for(i=0; i<N; i++){
+            arr[i] = Number(prompt("배열에 들어갈 숫자를 입력해주세요",""));
+        }
+        
+        /* 반복문 이용해서 정렬하기
+        for(k=0; k<N; k++){
+            for(j=k+1; j<N; j++){
+                if(arr[k] > arr[j]){
+                    var tmp = arr[k];
+                    arr[k] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        } */
+        
+        // 2.sort() 이용하기
+        arr.sort(function(a,b){
+            if(a > b) return 1;
+            if(a == b) return 0;
+            if(a < b) return -1;
+        })
+
+        document.write("최댓값 : " + arr[N-1] + "\n");
+        document.write("최솟값 : " + arr[0]);
+    </script>
+</body>
+</html>

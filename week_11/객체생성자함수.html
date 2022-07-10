@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        //display 메소드
+        function display(){
+            document.write(this.name + " : " + this.score + "</br>");
+        }
+
+        //Student 생성자 함수
+        function Student (name_value, score_value){
+            this.name = name_value;
+            this.score = score_value;
+            this.display = display;
+        }
+
+        var std = [];
+        var N = Number(prompt("학생 수를 입력하세요",""));
+
+        for(i=0; i<N; i++){
+            var stdName = prompt("이름을 입력하세요","");
+            
+            var mid = Number(prompt("중간고사 성적을 입력하세요",""));
+            var final = Number(prompt("기말고사 성적을 입력하세요",""));
+            
+            var stdScore = (mid + final) / 2;
+            
+            std[i] = new Student(stdName, stdScore); 
+        }
+
+        //출력
+        for(var i in std){
+            std[i].display();
+        }
+
+        //1등 가리기
+        var tmp = 0;
+        for(i=0; i<N; i++){
+            if(std[i].score > tmp){
+                tmp = std[i].score;
+                var result = std[i].name;
+            }
+        }
+
+        document.write("</br> 1등 학생 : " + result);
+    </script>
+</body>
+</html>

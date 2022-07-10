@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <input id="dept" type="text" name="department" value="computer science">
+    
+    <script type="text/javascript">
+        var dom = document.getElementById("dept");
+        alert(dom.value);
+        var newValue = prompt("Type new value of text box","");
+        dom.value =  newValue;
+        // document.write("name 속성의 값 : " + dom.value);
+    </script>
+</body>
+</html>

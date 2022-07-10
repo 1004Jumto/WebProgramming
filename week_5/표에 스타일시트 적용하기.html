@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표에 스타일시트 적용하기</title>
+    <style>
+        h3, td { text-align: center;}
+        table { margin: auto;}
+        th { width: 120px; background-color: skyblue; }
+        .ca { background-color: aqua;}
+        .mp { background-color: pink;}
+        .da { background-color: lime;}
+        .web { background-color: fuchsia;}
+        .mi { background-color: green; }
+    </style>
+</head>
+<body>
+    <h3>시간표</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>교시</th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td> <td></td> <td></td> <td rowspan="3" class="da">자료구조와 알고리즘</td>
+                <td></td> <td rowspan="3" class="mp">모바일 프로그래밍</td>
+            </tr>
+            <tr>
+                <td>2</td> <td></td> <td rowspan="2" class="ca">컴퓨터응용</td>  <td rowspan="2" class="web">웹프로그래밍</td>
+            </tr>
+            <tr>
+                <td>3</td> <td></td> 
+            </tr>
+            <tr>
+                <td>4</td> <td colspan="5">점심시간</td>
+            </tr>
+            <tr>
+                <td>5</td> <td rowspan="2" class="mi">멀티미디어 개론</td> <td rowspan="3" class="mp">모바일프로그래밍</td>
+                <td></td> <td></td> <td rowspan="2" class="ca">컴퓨터응용</td>
+            </tr>
+            <tr>
+                <td>6</td> <td></td> <td></td> 
+            </tr>
+            <tr>
+                <td>7</td> <td></td> <td></td> <td></td> <td></td> 
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

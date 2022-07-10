@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가방에 물건 넣기</title>
+        <style type="text/css">
+            #item {
+                width: 1200px;
+                height: 200px;
+                padding: 5px;
+                border: 1px solid;
+                margin: 10px;
+            }
+
+            #bag {
+                width: 1200px;
+                height: 200px;
+                padding: 5px;
+                border: 1px solid;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="item">
+            <img id="hamburger" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMjlfMjc0%2FMDAxNTc1MDE1MzQ0NTI0.rg-NsYRWm_PyrpwuF6oT2WrMWxK3g4o_xy1HT6D16dQg.P9iOKSnqaP2wEBprXttna_zjdj3wXtq2n2K_AsCSi00g.JPEG.cometsy%2F%25C7%25DC%25B9%25F6%25B0%25C5.jpg&type=sc960_832" style="width:200px; height:200px;" draggable="true">
+            <img id="noodle" src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2Frate%2FuaUzl1611117258.png&type=sc960_832" style="width:200px; height:200px;" draggable="true">
+            <img id="rice" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/rate/YGKtk1548316958.png" style="width:200px; height:200px;" draggable="true">
+            <img id="bibimbap" src="https://media.istockphoto.com/vectors/korean-food-vector-id968905736?k=20&m=968905736&s=612x612&w=0&h=UhmUJyAldWqoXIZuZf4rDAxUfLpdBXUKoeOUeWiDIWc=" style="width:200px; height:200px;" draggable="true">
+            <img id="sushi" src="https://images.otwojob.com/product/2/l/z/2lz5L8pJWvNNsMI.jpg/o2j/resize/852x622%3E" style="width:200px; height:200px;" draggable="true">
+        </div>
+        <div id="bag">
+            가방
+        </div>
+        <script type="text/javascript">
+            var src = document.getElementById("item");
+            var srcId;
+            var target = document.getElementById("bag");
+
+            src.ondragstart = function(e) {
+                srcId = e.target.id;
+                e.dataTransfer.setData("text", srcId);
+            }
+            target.ondragenter = function(e) {
+                dropId = e.target.id;
+            }
+            target.ondragover = function(e) {
+                e.preventDefault();
+            }
+            target.ondrop = function(e) {
+                var data = e.dataTransfer.getData("text");
+                e.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

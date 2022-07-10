@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restautrant</title>
+</head>
+<body>
+    <h2>레스토랑 예약하기</h2>
+    <form method="get" action="restaurant.php">
+        <fieldset>
+            <legend>예약자 정보</legend>
+            예약자 : <input type="text" name="name" required><br>
+            연락처 : <input type="tel" name="phone" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+            예약인원 : <select name="headcount" size="1">
+                <option value="2" selected>2명</option>
+                <option value="3">3명</option>
+                <option value="4">4명</option>
+                <option value="over5">5명이상</option>
+            </select>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>예약 시간 선택</legend>
+            <input type="date" name="last_date">
+            <input type="time" name="last_time">
+        </fieldset><br>
+
+        <fieldset>
+            <legend>메뉴 선택</legend>
+            <input type="radio" name="course" value="courseA" id="A"> 코스A 
+            <input type="radio" name="course" value="courseB"> 코스B 
+            <input type="radio" name="course" value="courseC"> 코스C
+            <input type="radio" name="course" value="courseD"> 코스D 
+            <br>
+
+            요청사항: <br>
+            <textarea name="comments" id="comments" cols="50" rows="5"></textarea><br>
+        </fieldset><br>
+
+        <input type="submit" value="예약">
+        <input type="reset" value="취소">
+    </form>
+    
+</body>
+</html>

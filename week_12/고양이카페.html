@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양이 카페 만들기</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Name(id){
+            var position = document.getElementById(id);     //새 div 들어갈 위치
+
+            var newName = prompt("put his/her name.","");   //이름 입력받기
+            var newText = document.createTextNode(newName); //이름 들어간 새 텍스트노드
+            var newDiv = document.createElement('div');     //새 div 생성
+            newDiv.style = "text-align: center;"            
+            newDiv.appendChild(newText);                    //새 div에 텍스트노드 붙이기
+
+            position.appendChild(newDiv);                   //div 추가
+        }
+    </script>
+
+    <h2><center>Welcome!</center></h2>
+    <h3><center>This is the cafe for loving cats <br>
+    please name them</center></h3>
+
+    <center>
+        <table border="1">
+            <caption>Lovely Cats</caption>
+            <tr>
+                <td id="t0"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120615_156%2Fi5sjeg9_1339740068934fL4pT_GIF%2F%25B0%25ED%25BE%25E7%25C0%25CC%25BF%25F2%25C2%25A9_%25281%2529.gif&type=sc960_832_gif" onclick="Name('t0');" alt="Unable to load Image" width="300px" height="300px"> </td>
+                <td id="t1"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20130403_54%2Fwlstnsdlqkqh_1364956246053O5moS_GIF%2F%25BF%25EC%25B8%25AE%25C1%25FD%25C0%25BA%25C3%25B3%25C0%25BD%25C0%25CC%25C1%25F6.gif&type=sc960_832_gif" onclick="Name('t1');" alt="Unable to load Image" width="300px" height="300px"> </td>
+                <td id="t2"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120710_286%2Fnayanaanna_1341885205640uayC4_GIF%2FB0EDBEE7C0CCB0EFC1F6B0EFC1F6.gif&type=sc960_832_gif" onclick="Name('t2');" alt="Unable to load Image" width="300px" height="300px"> </td>
+            </tr>
+            <tr>
+                <td id="t3"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140822_208%2F8884kiss_1408645078696dvaNF_JPEG%2F11014383081a560f5al.jpg&type=sc960_832" onclick="Name('t3');" alt="Unable to load Image" width="300px" height="300px"> </td>
+                <td id="t4"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150218_199%2Fgrimdream1_14242499061040FqNO_JPEG%2F%25B3%25C9%25C0%25CC2.jpg&type=sc960_832" onclick="Name('t4');" alt="Unable to load Image" width="300px" height="300px"> </td>
+                <td id="t5"><img id="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160520_300%2Fsinjims75_1463721925324TE9r0_JPEG%2F415566%25B0%25ED%25BE%25E7%25C0%25CC_5.jpg&type=sc960_832" onclick="Name('t5');" alt="Unable to load Image" width="300px" height="300px"> </td>
+            </tr>
+        </table>
+
+    </center>
+
+</body>
+</html>

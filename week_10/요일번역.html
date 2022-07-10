@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch문으로 한영 번역하기</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var day = prompt("요일을 입력해주세요","");
+
+        switch(day){
+            case "월요일":
+                day = "Monday"; break;
+            case "화요일":
+                day = "Tuesday"; break;
+            case "수요일":
+                day = "Wednesday"; break;
+            case "목요일":
+                day = "Thursday"; break;
+            case "금요일":
+                day = "Friday"; break;
+            case "토요일":
+                day = "Saturday"; break;
+            case "일요일":
+                day = "Sunday"; break;        
+
+        }
+
+        document.write(day);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산</title>
+</head>
+<body>
+    <table border="1">
+    <script type="text/javascript">
+        var input1 = parseInt(prompt("1. 정수를 입력해주세요",""));
+        var input2 = parseInt(prompt("2. 정수를 입력해주세요",""));
+        var plus = input1 + input2;
+        var minus = input1 - input2;
+        var multi = input1 * input2;
+        var divide = input1 / input2; 
+        
+        document.write("<caption>결과표</caption>");
+        document.write("<tr>");
+        document.write("<th> 숫자 </th>");
+        document.write("<th> " + input1 + " </th>");
+        document.write("<th> " + input2 + " </th>");
+        document.write("</tr>");
+        document.write("<tr> <td> 더하기 </td> <td colspan='2'> " + plus + "</td> </tr>");
+        document.write("<tr> <td> 빼기 </td> <td colspan='2'> " + minus + "</td> </tr>");
+        document.write("<tr> <td> 곱하기 </td> <td colspan='2'> " + multi + "</td> </tr>");
+        document.write("<tr> <td> 나누기 </td> <td colspan='2'> " + divide + "</td> </tr>");
+
+    </script>
+    </table>
+</body>
+</html>
